@@ -1,17 +1,16 @@
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
-import { 
-  LayoutDashboard, 
-  FileText, 
-  FileSpreadsheet, 
-  ClipboardCheck, 
-  Send, 
-  LogOut, 
-  Bell, 
+import {
+  LayoutDashboard,
+  FileText,
+  FileSpreadsheet,
+  ClipboardCheck,
+  Send,
+  LogOut,
+  Bell,
   User,
   Search,
   Menu,
   Settings,
-  ChevronRight
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -41,10 +40,10 @@ export default function DashboardLayout({ role }: DashboardLayoutProps) {
 
   return (
     <div className="flex h-screen bg-[#f1f5f9] overflow-hidden font-sans">
-      
+
       {/* Mobile Sidebar Overlay */}
       {sidebarOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-[60] lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
@@ -56,7 +55,7 @@ export default function DashboardLayout({ role }: DashboardLayoutProps) {
         ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         flex flex-col shadow-xl
       `}>
-        
+
         {/* Sidebar Header */}
         <div className="p-8">
           <div className="flex items-center gap-4">
@@ -78,8 +77,8 @@ export default function DashboardLayout({ role }: DashboardLayoutProps) {
               onClick={() => setSidebarOpen(false)}
               className={({ isActive }) => `
                 flex items-center gap-4 px-4 py-3 rounded-xl font-bold transition-all
-                ${isActive 
-                  ? 'bg-[#f2c94c] text-[#0b1f5b] shadow-md' 
+                ${isActive
+                  ? 'bg-[#f2c94c] text-[#0b1f5b] shadow-md'
                   : 'text-slate-300 hover:bg-white/10 hover:text-white'
                 }
               `}
@@ -101,11 +100,11 @@ export default function DashboardLayout({ role }: DashboardLayoutProps) {
 
       {/* MAIN CONTENT */}
       <main className="flex-1 flex flex-col min-w-0 overflow-hidden relative">
-        
+
         {/* HEADER */}
         <header className="h-20 bg-white border-b border-slate-200 flex items-center justify-between px-6 lg:px-10 shrink-0 relative z-[50]">
           <div className="flex items-center gap-6">
-            <button 
+            <button
               onClick={() => setSidebarOpen(true)}
               className="lg:hidden text-slate-600 p-1"
             >
@@ -126,7 +125,7 @@ export default function DashboardLayout({ role }: DashboardLayoutProps) {
             <div className="h-8 w-px bg-slate-200 mx-2 hidden sm:block"></div>
 
             <div className="relative">
-              <button 
+              <button
                 onClick={() => setProfileOpen(!profileOpen)}
                 className="flex items-center gap-3 p-1 rounded-xl hover:bg-slate-50 transition-all"
               >
@@ -153,7 +152,7 @@ export default function DashboardLayout({ role }: DashboardLayoutProps) {
                       <Settings size={16} /> Settings
                     </button>
                     <div className="px-3 mt-3">
-                      <button 
+                      <button
                         onClick={() => navigate('/')}
                         className="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-rose-50 text-rose-600 font-bold text-sm hover:bg-rose-100 transition-all"
                       >

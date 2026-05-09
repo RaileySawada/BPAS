@@ -7,7 +7,6 @@ import {
   ChevronRight,
   Plus,
   Clock,
-  MapPin,
   PhoneCall,
   LayoutGrid,
   ArrowRight

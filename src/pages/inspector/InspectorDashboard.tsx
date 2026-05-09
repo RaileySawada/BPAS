@@ -1,13 +1,12 @@
-import { 
-  Calendar, 
-  MapPin, 
-  Clock, 
-  CheckCircle2, 
-  ClipboardList, 
-  ChevronRight, 
-  Plus, 
-  FileText, 
-  User,
+import {
+  Calendar,
+  MapPin,
+  Clock,
+  CheckCircle2,
+  ClipboardList,
+  ChevronRight,
+  Plus,
+  FileText,
   ArrowRight,
   Eye,
   MoreVertical
@@ -27,7 +26,7 @@ export default function InspectorDashboard() {
 
   return (
     <div className="space-y-10 w-full animate-fade-up">
-      
+
       {/* Header Section */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-10 bg-[#0b1f5b] p-8 md:p-10 lg:p-14 rounded-[2.5rem] md:rounded-[3rem] text-white shadow-2xl relative overflow-hidden group">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mt-32 -mr-32 blur-3xl group-hover:scale-150 transition-transform duration-1000"></div>
@@ -63,7 +62,7 @@ export default function InspectorDashboard() {
       </div>
 
       <div className="grid grid-cols-1 xl:grid-cols-[1fr_500px] gap-8 md:gap-10">
-        
+
         {/* Today's Route - FIXING OVERFLOW */}
         <div className="bg-white rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-10 lg:p-14 shadow-sm border border-slate-100 overflow-hidden">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10 md:mb-12">
@@ -83,25 +82,22 @@ export default function InspectorDashboard() {
             {dailyRoute.map((stop, idx) => (
               <div key={idx} className="relative flex flex-col sm:flex-row items-start gap-6 sm:gap-10 group">
                 {/* Time Indicator */}
-                <div className={`w-14 h-14 md:w-16 md:h-16 shrink-0 rounded-2xl flex flex-col items-center justify-center z-10 border-[6px] border-white shadow-xl transition-all ${
-                  stop.status === 'Next Up' ? 'bg-[#0b1f5b] text-white scale-105 sm:scale-110' : 'bg-slate-100 text-slate-400'
-                }`}>
+                <div className={`w-14 h-14 md:w-16 md:h-16 shrink-0 rounded-2xl flex flex-col items-center justify-center z-10 border-[6px] border-white shadow-xl transition-all ${stop.status === 'Next Up' ? 'bg-[#0b1f5b] text-white scale-105 sm:scale-110' : 'bg-slate-100 text-slate-400'
+                  }`}>
                   <Clock size={18} className={stop.status === 'Next Up' ? 'text-[#f2c94c]' : ''} />
                   <span className="text-[9px] font-black uppercase mt-1 leading-none">{stop.time.split(' ')[1]}</span>
                 </div>
-                
+
                 {/* Info Card */}
-                <div className={`w-full p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] border transition-all duration-500 ${
-                  stop.status === 'Next Up' ? 'bg-slate-900 text-white shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)]' : 'bg-white border-slate-100 hover:bg-slate-50'
-                }`}>
+                <div className={`w-full p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] border transition-all duration-500 ${stop.status === 'Next Up' ? 'bg-slate-900 text-white shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)]' : 'bg-white border-slate-100 hover:bg-slate-50'
+                  }`}>
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4 md:mb-6">
                     <div className="space-y-1">
                       <p className={`text-[10px] font-black uppercase tracking-widest ${stop.status === 'Next Up' ? 'text-[#f2c94c]' : 'text-slate-300'}`}>{stop.time} Deployment</p>
                       <h4 className="text-xl md:text-2xl font-black tracking-tight leading-tight">{stop.name}</h4>
                     </div>
-                    <span className={`self-start px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest ${
-                      stop.status === 'Next Up' ? 'bg-[#f2c94c] text-[#0b1f5b]' : 'bg-slate-100 text-slate-500'
-                    }`}>
+                    <span className={`self-start px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest ${stop.status === 'Next Up' ? 'bg-[#f2c94c] text-[#0b1f5b]' : 'bg-slate-100 text-slate-500'
+                      }`}>
                       {stop.status}
                     </span>
                   </div>
@@ -125,7 +121,7 @@ export default function InspectorDashboard() {
                 <MoreVertical size={20} />
               </button>
             </div>
-            
+
             <div className="bg-slate-50/50 rounded-[2rem] p-6 md:p-8 border border-slate-100 group-hover:bg-slate-50 transition-colors">
               <div className="flex items-center gap-5 mb-8">
                 <div className="w-14 h-14 md:w-16 md:h-16 bg-white shadow-xl rounded-2xl flex items-center justify-center text-[#1746a2]">

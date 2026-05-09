@@ -1,4 +1,4 @@
-import { Search, Calendar, Filter, ChevronDown, Download, Printer, FileText } from 'lucide-react';
+import { Search, Filter, Download, Printer } from 'lucide-react';
 
 export default function AdminReports() {
   const reports = [
@@ -8,7 +8,7 @@ export default function AdminReports() {
 
   return (
     <div className="space-y-6 w-full">
-      
+
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
         <div>
           <h2 className="text-3xl font-bold text-slate-900 tracking-tight mb-1">Reports Inventory</h2>
