@@ -1,5 +1,5 @@
 import { useNavigate, Link } from 'react-router-dom';
-import { User, Lock, Eye, EyeOff, ArrowRight, ShieldCheck } from 'lucide-react';
+import { User, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 
 export default function LoginPage() {
@@ -77,10 +77,6 @@ export default function LoginPage() {
 
           <div className="max-w-sm mx-auto w-full">
             <div className="mb-10 lg:mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-full text-[10px] font-black text-slate-500 uppercase tracking-widest mb-6 border border-slate-200">
-                <ShieldCheck size={14} className="text-[#0b1f5b]" />
-                System Access
-              </div>
               <h3 className="text-3xl md:text-4xl font-black text-slate-900 mb-2 tracking-tight">Welcome</h3>
               <p className="text-slate-500 font-bold text-sm md:text-base opacity-80">Sign in to continue to the paperless inspection reporting dashboard.</p>
             </div>
