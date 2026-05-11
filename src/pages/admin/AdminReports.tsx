@@ -2,8 +2,8 @@ import { Search, Filter, Download, Printer } from 'lucide-react';
 
 export default function AdminReports() {
   const reports = [
-    { id: 'BIR-2026-004', bin: 'BIN-2026-1045', name: 'JLC Printing Services', location: 'Milagrosa, Calamba City', type: 'Retirement', date: 'May 5, 2026', status: 'Approved' },
-    { id: 'BIR-2026-007', bin: 'BIN-2026-1102', name: 'Tech Haven Gadgets', location: 'Poblacion, Calamba City', type: 'New', date: 'May 3, 2026', status: 'Approved' },
+    { ban: '002-05-2026-0000045', name: 'JLC Printing Services', location: 'Milagrosa, Calamba City', type: 'Retirement', date: 'May 5, 2026', status: 'Approved' },
+    { ban: '003-05-2026-0000102', name: 'Tech Haven Gadgets', location: 'Poblacion, Calamba City', type: 'New', date: 'May 3, 2026', status: 'Approved' },
   ];
 
   return (
@@ -46,7 +46,7 @@ export default function AdminReports() {
           <table className="w-full text-sm text-left">
             <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[10px] tracking-widest">
               <tr>
-                <th className="px-8 py-5">ID / BIN</th>
+                <th className="px-8 py-5">BAN</th>
                 <th className="px-8 py-5">Business Name</th>
                 <th className="px-8 py-5">Classification</th>
                 <th className="px-8 py-5">Date</th>
@@ -58,8 +58,7 @@ export default function AdminReports() {
               {reports.map((report, idx) => (
                 <tr key={idx} className="hover:bg-slate-50 transition-colors">
                   <td className="px-8 py-5">
-                    <p className="font-bold text-slate-900">{report.id}</p>
-                    <p className="text-[10px] font-bold text-slate-400">{report.bin}</p>
+                    <p className="font-bold text-slate-900 font-mono text-sm">{report.ban}</p>
                   </td>
                   <td className="px-8 py-5 font-bold text-slate-700">{report.name}</td>
                   <td className="px-8 py-5">
